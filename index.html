@@ -1,0 +1,49 @@
+<!-- Resources Used -->
+<!--
+    mapbox example for hover style
+    https://docs.mapbox.com/mapbox-gl-js/example/hover-styles/
+
+    lecture slides for expressions
+    mapbox docs for expression types and more detail
+
+    data source
+    https://www.nyc.gov/site/planning/data-maps/open-data/census-download-metadata.page
+
+    stackoverflow for telling me to use [setPaintProperty] insead of [setFeatureState]
+        when changing entire layer
+    https://stackoverflow.com/questions/59862014/dynamically-update-a-mapbox-gl-expression-to-show-or-hide-geometries
+    https://stackoverflow.com/questions/67631223/mapboxgl-js-animate-transition-geojson-feature-opacity
+    https://stackoverflow.com/questions/59181258/how-to-use-mapbox-expressions-to-toggle-layer-class-styles
+
+    MDN docs for javascript functions
+    Jquery docs for jquery functions
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/anims.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css' rel='stylesheet'/>
+  </head>
+  <body>
+    <div class="button" id="btn-1">
+      <p class="text-anim-mid">Monochrome</p>
+      <p class="text-anim-start">Borough</p>
+    </div>
+    <div class="button" id="btn-2">
+      <p class="text-anim-mid">Generate Rand</p>
+      <p class="text-anim-start">text</p>
+    </div>
+    <div id="my-map" class="map-container"></div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./src/button.js"></script>
+  <script src="./src/main.js"></script>
+</html>

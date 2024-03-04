@@ -1,0 +1,41 @@
+.text-anim-start {
+    margin: 0 0 0 0;
+    margin-right: 10px;
+    opacity: 0;
+}
+.text-anim-mid {
+    margin: 0 0 0 0;
+    opacity: 1;
+}
+.text-anim-in {
+    animation: text-key-anim-in 0.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+.text-anim-out {
+    animation: text-key-anim-out.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes text-key-anim-in {
+    0% {
+        opacity: 0;
+        margin-right: 10px;
+    }
+    100% {
+        opacity: 1;
+        margin-right: 0px;
+    }
+}
+
+@keyframes text-key-anim-out {
+    0% {
+        opacity: 1;
+        margin-right: 0px;
+    }
+    100% {
+        opacity: 0;
+        margin-right: -5px;
+    }
+}
