@@ -8,6 +8,7 @@ const map = new mapboxgl.Map({
 });
 
 map.on("load", () => {
+    map.addControl(new mapboxgl.NavigationControl()); // add nav controls
 
     // https://www.nyc.gov/site/planning/data-maps/open-data/census-download-metadata.page
     map.addSource('nyc-data', {
@@ -163,15 +164,13 @@ map.on("load", () => {
         }
 
         $($(e.currentTarget).children()[1]).text(toSetText);
-        map.setPaintProperty('nyc-data-lyr', 'fill-color', `#${toSetText}`);
+        if (toSetText.length<=6) map.setPaintProperty('nyc-data-lyr', 'fill-color', `#${toSetText}`);
 
         transitionFunc(e, randomizedCalls);
         randomizedCalls += 1;
     });
     btn2.addOffFunc(function(e) {
         transitionFunc(e, randomizedCalls);
-
-        console.log(4);
         randomizedCalls += 1;
     });
 
